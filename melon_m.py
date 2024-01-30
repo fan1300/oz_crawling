@@ -32,8 +32,9 @@ time.sleep(1)
 
 more_btn = driver.find_elements(By.CSS_SELECTOR, "#moreBtn")[1].click()
 soup = BeautifulSoup(driver.page_source, 'html.parser')
+time.sleep(1)
 
-items = soup.select(".service_list.list_music")
+items = soup.select(".service_list.list_music > .list_item")
 
 time.sleep(1)
 
