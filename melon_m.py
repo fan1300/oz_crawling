@@ -31,8 +31,9 @@ driver.find_element(By.LINK_TEXT, "멜론차트").click()
 time.sleep(1)
 
 more_btn = driver.find_elements(By.CSS_SELECTOR, "#moreBtn")[1].click()
+time.sleep(2)
+
 soup = BeautifulSoup(driver.page_source, 'html.parser')
-time.sleep(1)
 
 items = soup.select(".service_list.list_music > .list_item")
 
@@ -50,11 +51,4 @@ for i in items:
     print()
     num +=1
     
-#driver.quit()
-    
-
-
-#순위
-#제목
-#가수이름
-#순위변동
+driver.quit()
